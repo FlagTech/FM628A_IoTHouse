@@ -2,7 +2,7 @@ from machine import ADC,SPI,PWM,Pin
 import time
 import neopixel,dht
 
-# buzzer D7 
+# buzzer D8 
 buzz = PWM(Pin(15))
 buzz.freq(392)
 buzz.duty(0)
@@ -15,36 +15,24 @@ window=Pin(16,Pin.IN)
 
 # servo D1
 servo = PWM(Pin(5), freq=50)
-servo.duty(30)#舵机角度的设定
 
-# temp D8
+# temp D7
 temp= dht.DHT11(Pin(13))
-print(temp)
 
 # fan D3 
 fan=Pin(0,Pin.OUT)
-fan.value(1)
 
-# RGB 
+# RGB D5
 np = neopixel.NeoPixel(Pin(14),1)
-np[0] = (1,1,1)
-np.write()
 
 # light A0
 light = ADC(0)
 
-# laser
+# laser D6
 laser=Pin(12,Pin.OUT)
-laser.value(1)
 
-# window
-window=Pin(16,Pin.IN)
-
-# sound
+# sound D2
 sound=Pin(4,Pin.IN)
-
-# temp.measure()
-
 
 while True:
     try:
