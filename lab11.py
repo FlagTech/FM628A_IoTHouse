@@ -4,12 +4,12 @@ import BlynkLib
 
 sta_if=network.WLAN(network.STA_IF)
 sta_if.active(True)
-sta_if.connect("colombo0718", "12345678")
+sta_if.connect("Wifi 基地台", "Wifi 密碼")
 while not sta_if.isconnected():
     pass
 print('wifi connect')
 
-token="s8UalOzfOY-Cex91g8gZdgFPcgaYc7_2"
+token="Blynk 權杖"
 blynk=BlynkLib.Blynk(token)
 
 # light A0

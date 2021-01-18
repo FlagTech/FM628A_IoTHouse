@@ -39,11 +39,8 @@ while True:
         temp.measure()
     except OSError as e:
         print("can't get temp")
-#     print("光感測  溫度  濕度  按鈕  磁簧  聲音")
-#     print(light.read(),temp.temperature(),temp.humidity(),door.value(),window.value(),sound.value())
-    print("光感測:"+str(light.read())+" 溫度:"+str(temp.temperature())+" 濕度:"+str(temp.humidity()))
-    print("按鈕:"+str(door.value())+" 磁簧:"+str(window.value())+" 聲音:"+str(sound.value()) )
-    print('--------')
+    print("光感測  溫度  濕度  按鈕  磁簧  聲音")
+    print(light.read(),temp.temperature(),temp.humidity(),door.value(),window.value(),sound.value())
 #     print(light.read(),door.value(),window.value(),sound.value())
 
     fan.value(1)
@@ -52,17 +49,14 @@ while True:
     np[0] = (10,10,10)
     np.write()
     buzz.duty(500)
-    time.sleep(.5)
+    time.sleep(5)
     
     try:
         temp.measure()
     except OSError as e:
         print("can't get temp")
-#     print("光感測  溫度  濕度  按鈕  磁簧  聲音")
-#     print(light.read(),temp.temperature(),temp.humidity(),door.value(),window.value(),sound.value())
-    print("光感測:"+str(light.read())+" 溫度:"+str(temp.temperature())+" 濕度:"+str(temp.humidity()))
-    print("按鈕:"+str(door.value())+" 磁簧:"+str(window.value())+" 聲音:"+str(sound.value()) )
-    print('--------')
+    print("光感測  溫度  濕度  按鈕  磁簧  聲音")
+    print(light.read(),temp.temperature(),temp.humidity(),door.value(),window.value(),sound.value())
 #     print(light.read(),door.value(),window.value(),sound.value())
     
     fan.value(0)
@@ -71,7 +65,7 @@ while True:
     np[0] = (0,0,0)
     np.write()
     buzz.duty(0)
-    time.sleep(.5)
+    time.sleep(5)
     
     
     

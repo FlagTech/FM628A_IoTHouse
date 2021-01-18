@@ -39,6 +39,10 @@ blynk.on("V6", v6_handler)
 
 while True :
     blynk.run()
+#     r=urandom.getrandbits(1)
+#     g=urandom.getrandbits(1)
+#     b=urandom.getrandbits(1)
     print(r,g,b)
     np[0] = (r,g,b)
     np.write()
+#     time.sleep( 1)
